@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security for Kids: Roleplay Guide (Tabs)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Tabs Styling */
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden; /* Ensures rounded corners for children */
+        }
+
+        .tab-button {
+            flex-grow: 1; /* Make buttons take equal width */
+            padding: 15px 10px;
+            border: none;
+            background-color: #e0e0e0;
+            color: #555;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+            border-bottom: 3px solid transparent; /* For active state */
+        }
+
+        .tab-button:hover {
+            background-color: #d0d0d0;
+        }
+
+        .tab-button.active {
+            background-color: #2196F3; /* Active tab blue */
+            color: white;
+            border-bottom: 3px solid #1976D2; /* Darker blue line */
+        }
+
+        .tab-content {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #2196F3; /* Blue border for cards */
+            display: none; /* Hidden by default */
+        }
+
+        .tab-content.active {
+            display: block; /* Shown when active */
+        }
+
+        .tab-content h2 {
+            color: #3f51b5;
+            margin-top: 0;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-content h3 {
+            color: #00796B;
+            margin-top: 25px;
+        }
+
+        .tab-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tab-content ul li {
+            background: #e3f2fd;
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tab-content ul li::before {
+            content: '✔️';
+            margin-right: 10px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .fraud-example {
+            background-color: #fffde7;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .fraud-example h3 {
+            color: #e65100;
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main {
+                margin: 15px auto;
+                padding: 0 15px;
+            }
+            .tab-button {
+                font-size: 0.9rem;
+                padding: 12px 8px;
+            }
+            .tab-content {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .tabs {
+                flex-wrap: wrap; /* Allow tabs to wrap on small screens */
+            }
+            .tab-button {
+                flex-basis: 50%; /* Two buttons per row on very small screens */
+                padding: 10px 5px;
+            }
+            .tab-content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cyber Security Superheroes: Roleplay Guide!</h1>
+        <p>Learn to be safe online and protect your digital world!</p>
+    </header>
+
+    <main>
+        <section id="introduction" class="card">
+            <h2>Welcome, Young Cyber Heroes!</h2>
+            <p>Ready to explore the amazing world of the internet? It's a great place, but just like real life, we need to be careful and smart. This page will help you understand how to be a **Cyber Security Superhero** for your roleplay!</p>
+        </section>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="cyber-security-tab">Cyber Security</button>
+            <button class="tab-button" data-tab="cyber-ethics-tab">Cyber Ethics</button>
+            <button class="tab-button" data-tab="cyber-crime-tab">Cyber Crime</button>
+            <button class="tab-button" data-tab="cyber-arrest-tab">Cyber Arrest</button>
+            <button class="tab-button" data-tab="cyber-frauds-tab">Cyber Frauds</button>
+        </div>
+
+        <section id="cyber-security-tab" class="tab-content active">
+            <h2>🛡️ Cyber Security: What is it?</h2>
+            <p><strong>Cyber Security</strong> is all about protecting your computers, phones, and information on the internet. Think of it like a shield that keeps you safe in the digital world!</p>
+            <h3>Why is it important?</h3>
+            <ul>
+                <li><strong>Protects your secrets:</strong> Keeps your passwords, photos, and personal messages safe.</li>
+                <li><strong>Stops bad guys:</strong> Prevents hackers and online tricksters from causing harm.</li>
+                <li><strong>Keeps your devices healthy:</strong> Protects your computer and phone from viruses and other damaging programs.</li>
+                <li><strong>Ensures safe online fun:</strong> Allows you to play games, learn, and connect with friends safely.</li>
+            </ul>
+            <h3>How can you be a Cyber Security Superhero?</h3>
+            <ul>
+                <li>Use **strong passwords** (mix of letters, numbers, symbols!).</li>
+                <li>Be careful what you **click on** (especially links in emails).</li>
+                <li>Don't share **personal information** with strangers online.</li>
+                <li>Ask a **trusted adult** if something online feels wrong.</li>
+            </ul>
+            <h4>Roleplay Idea:</h4>
+            <p>One student explains to another what Cyber Security means using simple words and examples. Or, two students act out a situation where one is about to make an unsafe online choice, and the other (the "Cyber Security Superhero") helps them make a safer choice.</p>
+        </section>
+
+        <section id="cyber-ethics-tab" class="tab-content">
+            <h2>🌍 Cyber Ethics: Be a Good Digital Citizen</h2>
+            <p><strong>Cyber Ethics</strong> means using the internet in a good and respectful way. It's about being kind, honest, and responsible online.</p>
+            <h3>What does it mean?</h3>
+            <ul>
+                <li><strong>Respect Others:</strong> Don't say mean things or bully anyone online.</li>
+                <li><strong>Be Honest:</strong> Don't pretend to be someone you're not or cheat online.</li>
+                <li><strong>Ask for Permission:</strong> Don't share someone else's photos or information without their OK.</li>
+                <li><strong>Protect Privacy:</strong> Don't try to find out personal details about others without their consent.</li>
+            </ul>
+            <h3>Examples for Roleplay:</h3>
+            <p>Imagine you find your friend's game login details. A good cyber citizen would tell them or ignore it, not use it!</p>
+            <p>Someone posts a funny picture of you without asking. What should you do? (Talk to them politely).</p>
+        </section>
+
+        <section id="cyber-crime-tab" class="tab-content">
+            <h2>🚨 Cyber Crime: When Online Goes Wrong</h2>
+            <p><strong>Cyber Crime</strong> is when someone uses a computer or the internet to do something illegal. It's like stealing or cheating, but it happens online.</p>
+            <h3>What can be a Cyber Crime?</h3>
+            <ul>
+                <li><strong>Stealing Money:</strong> Hacking into someone's bank account.</li>
+                <li><strong>Spreading Viruses:</strong> Sending harmful programs to damage computers.</li>
+                <li><strong>Online Bullying:</strong> Constantly harassing or threatening someone online.</li>
+                <li><strong>Hacking:</strong> Breaking into someone's computer or website without permission.</li>
+            </ul>
+            <h3>Examples for Roleplay:</h3>
+            <p>Someone tries to hack into your online game account to steal your items. What happens next?</p>
+            <p>A person sends a virus through an email attachment. What should the recipient do?</p>
+        </section>
+
+        <section id="cyber-arrest-tab" class="tab-content">
+            <h2>👮 Cyber Arrest: Catching the Bad Guys!</h2>
+            <p>Just like in real life, if someone commits a **Cyber Crime**, they can be arrested by the police. There are special **Cyber Police** teams in India (and around the world) who investigate online crimes.</p>
+            <h3>How it works:</h3>
+            <ul>
+                <li>If you report an online crime, the police will investigate.</li>
+                <li>They gather evidence from computers and the internet.</li>
+                <li>If they find enough proof, the cyber criminal can be caught and punished.</li>
+            </ul>
+            <h3>Examples for Roleplay:</h3>
+            <p>A group of students pretends to be the Cyber Police investigating a "phishing" scam (see below!).</p>
+            <p>Someone posts very mean messages online, and a parent reports it. What happens to the person who posted the messages?</p>
+        </section>
+
+        <section id="cyber-frauds-tab" class="tab-content">
+            <h2>💸 Cyber Frauds: Tricky Traps Online</h2>
+            <p><strong>Cyber Fraud</strong> is when people try to trick you online to steal your money or personal information. They often promise you something amazing or free!</p>
+
+            <div class="fraud-example">
+                <h3>🎣 Phishing: The "Fishing" for Information Trick!</h3>
+                <p>This is when someone sends you a fake email or message that looks like it's from a real bank, company, or famous person. They try to "fish" for your **personal details** like passwords, bank account numbers, or your address.</p>
+                <h4>How to spot it:</h4>
+                <ul>
+                    <li>The email address looks weird (e.g., `banksupport@gmail.com` instead of `support@bank.com`).</li>
+                    <li>Lots of spelling mistakes or bad grammar.</li>
+                    <li>They ask you for sensitive information directly.</li>
+                    <li>The links look suspicious (hover over them without clicking!).</li>
+                </ul>
+                <h4>Roleplay Idea:</h4>
+                <p>One student sends a "phishing email" to another. The receiver has to identify the fake email and tell why it's fake. (Hint: "Dear Valued Customer" with no name, strange link, urgent tone!)</p>
+            </div>
+
+            <div class="fraud-example">
+                <h3>💥 DoS Attack (Denial of Service): Overloading a Website!</h3>
+                <p>Imagine everyone in your class tries to go through a single door at the exact same time. What happens? The door gets blocked, and no one can get through! A **DoS attack** is similar. Many computers (often controlled by a hacker) try to access a website or online service at once, making it slow down or crash. This stops real users from using it.</p>
+                <h4>How it feels:</h4>
+                <ul>
+                    <li>A website loads super slowly.</li>
+                    <li>You can't log into your favorite game.</li>
+                    <li>An online service completely stops working.</li>
+                </ul>
+                <h4>Roleplay Idea:</h4>
+                <p>One group of students tries to "access" an online "game server" (another student or group). Another group acts as the "attackers" trying to flood the "server" with so many requests that it "crashes" and the first group can't play.</p>
+            </div>
+
+            <div class="fraud-example">
+                <h3>🎁 Lottery/Prize Fraud: "You Won, Just Pay First!"</h3>
+                <p>You get a message saying you've won a huge lottery or prize! But to get it, you first need to pay a small "fee" or "tax." This is a trick to steal your money.</p>
+            </div>
+            <div class="fraud-example">
+                <h3>💼 Job Scam: "Great Job, Just Pay for Training!"</h3>
+                <p>Someone offers you an amazing job with a high salary, but then asks you to pay for "training materials" or an "application fee." Real jobs don't ask you for money upfront.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cyber Safety for Kids. Be smart, stay safe!</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            // Function to show a specific tab
+            function showTab(tabId) {
+                // Remove 'active' class from all buttons and content
+                tabButtons.forEach(button => button.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add 'active' class to the clicked button and its corresponding content
+                const activeButton = document.querySelector(`[data-tab="${tabId}"]`);
+                const activeContent = document.getElementById(tabId);
+
+                if (activeButton) activeButton.classList.add('active');
+                if (activeContent) activeContent.classList.add('active');
+            }
+
+            // Add click event listener to each tab button
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.dataset.tab; // Get the tab ID from data-tab attribute
+                    showTab(tabId);
+                });
+            });
+
+            // Show the first tab by default when the page loads
+            // Changed this to ensure 'cyber-security-tab' is shown by default
+            showTab('cyber-security-tab');
+        });
+    </script>
+</body>
+</html>
